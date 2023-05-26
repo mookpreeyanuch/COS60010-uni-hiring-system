@@ -1,8 +1,8 @@
 /**
-* Author: Palida Parichayawong, Student ID: 103822045
-* Target: apply.html and about.html
-* Purpose: enhancements(apply.html: count down clock, about.html: random profile pictures )
-* Last updated: 24 April 2023
+* Author: TripleP
+* Target: apply.php
+* Purpose: Count down clock
+* Last updated: 19 May 2023
 * Credits:
 */
 
@@ -50,7 +50,7 @@ const countDownClock = (number = 100, format = "seconds") => {
             if (secondsLeft <= 0) {
                 clearInterval(countdown);
 
-                window.location = "index.html";
+                window.location = "index.php";
                 return;
             };
 
@@ -84,5 +84,5 @@ window.onload = function () {
     enter number and format
     hours, minutes or seconds
     */
-    countDownClock(5, "minutes");
+    countDownClock(10, "minutes");
 };

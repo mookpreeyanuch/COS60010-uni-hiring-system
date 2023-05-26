@@ -1,8 +1,8 @@
 /**
-* Author: Palida Parichayawong, Student ID: 103822045
-* Target: apply.html and about.html
-* Purpose: enhancements(apply.html: count down clock, about.html: random profile pictures )
-* Last updated: 24 April 2023
+* Author: TripleP
+* Target: apply.php
+* Purpose: Validate
+* Last updated: 19 May 2023
 * Credits:
 */
 const stateArray = {
@@ -17,15 +17,33 @@ const stateArray = {
 };
 
 const skillArray = {
-    "cloud": "cloud",
-    "html": "html",
-    "javascript": "javascript",
-    "php": "php",
-    "mysql": "mysql",
-    "other": "other",
+    "skill1": "Doctoral degree",
+    "skill2": "Masters degree",
+    "skill3": "Graduate diploma",
+    "skill4": "Graduate certificate",
+    "skill5": "Bachelor degree",
+    "skill6": "other",
 };
 
-function calculateAge(dob) { 
+const availabilityArray = {
+    "mon1": "Monday-Morning",
+    "mon2": "Monday-Afternoon",
+    "mon3": "Monday-Evening",
+    "tue1": "Tueday-Morning",
+    "tue2": "Tueday-Afternoon",
+    "tue3": "Tueday-Evening",
+    "wed1": "Wednesday-Morning",
+    "wed2": "Wednesday-Afternoon",
+    "wed3": "Wednesday-Evening",
+    "thu1": "Thursday-Morning",
+    "thu2": "Thursday-Afternoon",
+    "thu3": "Thursday-Evening",
+    "fri1": "Friday-Morning",
+    "fri2": "Friday-Afternoon",
+    "fri3": "Friday-Evening",
+};
+
+function calculateAge(dob) {
     var diffMs = Date.now() - dob.getTime();
     var ageDiff = new Date(diffMs); 
   
@@ -231,6 +249,7 @@ window.onload = function () {
     bindInput("postcode");
     bindInput("email");
     bindInput("phone");
-    bindCheckbox("skill[]");
+    bindCheckbox("skills[]");
     bindInput("other_skills");
+    bindCheckbox("availability[]")
 };
